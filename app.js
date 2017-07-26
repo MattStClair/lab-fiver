@@ -12,10 +12,9 @@ For DONE item, be sure to change it to say DONE when you have successfully compl
 
 // TODO: Write your code here
 function sum(a,b){ //eslint-disable-line
-    var result = a+b;
-    var message = ('The sum of ' + a + ' and ' + b  + ' is ' + result + '.');
-
-    return [result, message]; ///come up with output first
+  var result = a + b;
+  var message = ('The sum of ' + a + ' and ' + b  + ' is' + result + '.');
+  return [result, message]; ///come up with output first
 }
 
 // DONE: Here is the test for sum(); uncomment it to run it
@@ -29,7 +28,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 where the first element is the product of those numbers, and the second element is a
 string that EXACTLY follows this example and uses the parameters and values that were
- input/calculated into the function:
+input/calculated into the function:
 
 "The product of 5 and 9 is 45."
 
@@ -37,11 +36,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // DONE: Write your code here
 function multiply(a,b){ //eslint-disable-line
-
-      var product = a * b ;
-      var messageTwo = ('The product of ' + a + ' and ' + b + ' is ' + product + '.');
-      return [product, messageTwo]
-
+  var product = a * b ;
+  var messageTwo = ('The product of ' + a + ' and ' + b + ' is ' + product + '.');
+  return [product, messageTwo];
 }
 
 // DONE: Here is the test for multiply(); uncomment it to run it
@@ -69,24 +66,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // DONE: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
-    var partOfSum = sum(a,b);  ////sum in problem one is an array...
-
-    var newSum = sum(partOfSum[0], c);
-
-    var partOfMult = multiply(a,b);
-    var newMult = multiply(partOfMult[0], c);
-
+  var partOfSum = sum(a,b);  ////sum in problem one is an array...
+  var newSum = sum(partOfSum[0], c);
+  var partOfMult = multiply(a,b);
+  var newMult = multiply(partOfMult[0], c);
   // shows that it is an array  console.log(sum(4,7));
-    console.log(newSum);
-    var elementThree = (a + ' and ' + b + ' and ' + c + ' sum to ' +  newSum[0] + '.');
-    var elementFour = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + newMult[0] + '.');
-
-    return [newSum[0], newMult[0], elementThree , elementFour]
+  console.log(newSum);
+  var elementThree = (a + ' and ' + b + ' and ' + c + ' sum to ' + newSum[0] + '.');
+  var elementFour = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + newMult[0] + '.');
+  return [newSum[0], newMult[0], elementThree , elementFour];
 }
 
 // DONE: Here is the test for sumAndMultiply(); uncomment it to run it
- testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -112,19 +104,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
-    var partSum = sum(testArray[0], testArray[1]);
-
-    var restOfFour = sum(partSum[0], testArray[2]);
-
-    console.log('try this:  ', restOfFour[0]);
-    //"2,3,4 was passed in as an array of numbers, and 9 is their sum."
-
+  var partSum = sum(testArray[0], testArray[1]);
+  var restOfFour = sum(partSum[0], testArray[2]);
+  console.log('try this:  ', restOfFour[0]);
+  //"2,3,4 was passed in as an array of numbers, and 9 is their sum."
   //  var sumTotal = sum(partSum, restOfFour);
-    //console.log('sumTotal: ', sumTotal);
-    var probFourMessage = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + restOfFour[0] + ' is their sum.';
-    return[restOfFour[0], probFourMessage];
-
+  //console.log('sumTotal: ', sumTotal);
+  var probFourMessage = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + restOfFour[0] + ' is their sum.';
+  return[restOfFour[0], probFourMessage];
 }
 
 // DONE: Here is the test for sumArray(); uncomment it to run it
@@ -144,20 +131,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
   var partProd = multiply(testArray[0], testArray[1]);
-
   var restOfProd = multiply(partProd[0], testArray[2]);
-
   console.log('try this:  ', restOfProd[0]);
-
-
   var probFiveMessage = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + restOfProd[0] + '.';
   return[restOfProd[0], probFiveMessage];
-
-
-
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
